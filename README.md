@@ -17,10 +17,10 @@ Download the data and unzip it in `data/SMD`.
 ## Repository Structure
 
 ### `conf`
-This directory contains experiment parameters for the MOC model on IOpsCompetition, SWaT, and WADI datasets.
+This directory contains experiment parameters for the MemMS model on IOpsCompetition, SWaT, and WADI datasets.
 
 ### `models`
-Source code of the MOC models.
+Source code of the MemMS models.
 
 
 ## Usage
