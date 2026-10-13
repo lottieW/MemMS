@@ -1,0 +1,43 @@
+class Config:
+    """Independent Exathlon experiment configuration."""
+
+    def __init__(self):
+        self.dataset = 'Exathlon'
+        self.input_channels = 19
+
+        # Encoder and experts.
+        self.window_size = 64
+        self.time_step = 64
+        self.d_model = 32
+        self.tcn_layers = 2
+        self.dropout = 0.1
+        self.num_experts = 10
+
+        # Memory and the two combined objectives.
+        self.normal_memory_size = 32
+        self.memory_topk = 8
+        self.memory_strength = 0.4
+        self.lambda_aux = 0.03
+        self.score_memory_weight = 0.1
+
+        # Training and validation.
+        self.num_epoch = 5
+        self.early_stop = 5
+        self.batch_size = 128
+        self.beta1 = 0.9
+        self.beta2 = 0.999
+        self.num_workers = 0
+        self.drop_last = False
+        self.study_name = "final"
+        self.trial_id = "final"
+        self.lr = 0.0003
+        self.weight = 0.0005
+
+        # Anomaly Detection parameters
+        self.detect_nu = 0.0005
+        self.threshold_determine = 'floating'
+
+        # Output and profiling options.
+        self.profile_timing = False  # Record training and evaluation timing.
+        self.save_diagnostics = False  # Save per-window scores and evaluation diagnostics.
+        self.keep_checkpoints = False  # Retain the calibrated best model after evaluation.
